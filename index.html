@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DH OPTICS | SEE THE DIFFERENCE</title>
+  
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#FAF8F5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="DH Optics">
+
+  <link rel="manifest" href="data:application/manifest+json;utf-8,%7B%22name%22%3A%22DH%20Optics%22%2C%22short_name%22%3A%22DH%20Optics%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23FAF8F5%22%2C%22theme_color%22%3A%22%23FAF8F5%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F648%2F648871.png%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%7D">
+
+  <!-- Tailwind CSS & Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Tajawal', 'sans-serif'],
+          },
+          colors: {
+            cream: {
+              50: '#FDFBF7',
+              100: '#FAF8F5',
+              200: '#F3EFEA',
+              300: '#E8E2D8',
+              400: '#D5CCC0'
+            },
+            slateGray: {
+              100: '#F1F3F5',
+              200: '#E5E8EB',
+              300: '#CFD4DA',
+              600: '#5A626A',
+              700: '#3E444D',
+              800: '#23272E',
+              900: '#14171C'
+            },
+            brandTouch: {
+              orange: '#E8590C',
+              orangeDark: '#C94A05',
+              lime: '#709A08',
+              limeSoft: '#F4FCE3',
+              orangeSoft: '#FFF4E6'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #FAF8F5;
+      color: #23272E;
+      -webkit-tap-highlight-color: transparent;
+      scroll-behavior: smooth;
+    }
+
+    /* حركة شريط الإعلانات التفاعلي اللانهائي */
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track {
+      display: flex;
+      width: 200%;
+      animation: marqueeScroll 25s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* انيميشن الزر الرئيسي */
+    @keyframes subtlePulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(232, 89, 12, 0.25); }
+      50% { transform: scale(1.02); box-shadow: 0 15px 35px -5px rgba(232, 89, 12, 0.45); }
+    }
+    @keyframes lightSweep {
+      0% { transform: translateX(200%) skewX(-20deg); }
+      100% { transform: translateX(-200%) skewX(-20deg); }
+    }
+    .hero-btn-animated {
+      animation: subtlePulse 2.8s infinite ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-btn-animated::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+      animation: lightSweep 3s infinite;
+    }
+
+    /* شاشة الدخول الفاخرة Intro Splash Screen */
+    #luxuryIntroOverlay {
+      transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+    }
+    .intro-revealed {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Typing Animation */
+    @keyframes dotWave {
+      0%, 100% { transform: translateY(0); opacity: 0.4; }
+      50% { transform: translateY(-4px); opacity: 1; }
+    }
+    .wave-1 { animation: dotWave 1.2s infinite ease-in-out 0s; }
+    .wave-2 { animation: dotWave 1.2s infinite ease-in-out 0.2s; }
+    .wave-3 { animation: dotWave 1.2s infinite ease-in-out 0.4s; }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="selection:bg-brandTouch-orangeSoft selection:text-brandTouch-orange pb-28 md:pb-16">
+
+  <!-- ================= LUXURY CINEMATIC INTRO SPLASH ================= -->
+  <div id="luxuryIntroOverlay" class="fixed inset-0 z-[100] bg-slateGray-900 flex flex-col items-center justify-center text-center px-4">
+    <div class="relative flex flex-col items-center animate-pulse">
+      <!-- Logo Mark -->
+      <div class="w-16 h-16 bg-black rounded-2xl border border-slateGray-700 flex items-center justify-center p-3 mb-4 shadow-2xl">
+        <svg viewBox="0 0 100 100" class="w-full h-full">
+          <path d="M 18 20 L 44 20 C 56 20 62 30 62 46 C 62 62 56 72 44 72 L 18 72 Z" fill="none" stroke="#FFFFFF" stroke-width="12"/>
+          <path d="M 62 20 L 62 72 M 84 20 L 84 72 M 62 46 L 84 46" fill="none" stroke="#FFFFFF" stroke-width="12"/>
+          <polygon points="46,72 58,72 74,20 62,20" fill="#E8590C"/>
+          <polygon points="58,72 66,72 78,20 70,20" fill="#709A08"/>
+        </svg>
+      </div>
+      <h1 class="text-2xl md:text-3xl font-black text-white tracking-widest uppercase">
+        DH <span class="text-brandTouch-orange">OPTICS</span>
+      </h1>
+      <p class="text-[10px] text-brandTouch-lime tracking-[0.35em] uppercase font-bold mt-1">SEE THE DIFFERENCE</p>
+      
+      <!-- Loading Accent Line -->
+      <div class="w-28 h-0.5 bg-slateGray-800 rounded-full mt-6 overflow-hidden">
+        <div class="w-full h-full bg-gradient-to-r from-brandTouch-orange to-brandTouch-lime animate-pulse"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-slateGray-900 text-cream-100 py-1.5 text-xs px-3 border-b border-slateGray-800">
+    <div class="flex justify-between items-center max-w-6xl mx-auto font-medium">
+      <div class="flex items-center gap-3">
+        <span class="text-cream-300 flex items-center gap-1.5 font-bold">
+          <i class="fa-solid fa-phone text-[10px] text-brandTouch-orange"></i> خدمة العملاء:
+        </span>
+        <a href="tel:01096141190" class="hover:text-white font-mono tracking-wider transition-colors">01096141190</a>
+        <span class="text-slateGray-700">|</span>
+        <a href="tel:01271458000" class="hover:text-white font-mono tracking-wider transition-colors">01271458000</a>
+      </div>
+      <div class="hidden md:flex text-cream-200 items-center gap-2 text-[11px] font-bold">
+        <span class="w-2 h-2 rounded-full bg-brandTouch-lime animate-ping"></span>
+        عروض حصرية لفترة محدودة على التشكيلات المميزة
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-cream-100/95 backdrop-blur-md border-b border-cream-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative w-10 h-10 bg-slateGray-900 rounded-xl flex items-center justify-center p-2 shadow-sm transition-transform group-hover:scale-105">
+          <svg viewBox="0 0 100 100" class="w-full h-full">
+            <path d="M 18 20 L 44 20 C 56 20 62 30 62 46 C 62 62 56 72 44 72 L 18 72 Z" fill="none" stroke="#FFFFFF" stroke-width="12"/>
+            <path d="M 62 20 L 62 72 M 84 20 L 84 72 M 62 46 L 84 46" fill="none" stroke="#FFFFFF" stroke-width="12"/>
+            <polygon points="46,72 58,72 74,20 62,20" fill="#E8590C"/>
+            <polygon points="58,72 66,72 78,20 70,20" fill="#709A08"/>
+          </svg>
+        </div>
+        <div>
+          <span class="text-xl font-black tracking-wider text-slateGray-900 flex items-center gap-1 leading-none">
+            DH <span class="text-brandTouch-orange">OPTICS</span>
+          </span>
+          <span class="text-[8.5px] text-slateGray-600 font-extrabold tracking-[0.25em] block uppercase mt-0.5">
+            SEE THE DIFFERENCE.
+          </span>
+        </div>
+      </a>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2.5">
+        <button id="installAppBtn" class="hidden md:flex items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-xl border border-slateGray-300 text-slateGray-800 hover:bg-slateGray-200 transition-all">
+          <i class="fa-solid fa-mobile-screen-button text-brandTouch-orange"></i>
+          <span>تثبيت التطبيق</span>
+        </button>
+
+        <button onclick="openCheckoutModal()" class="relative p-2.5 rounded-xl bg-white border border-cream-300 text-slateGray-900 hover:border-slateGray-800 transition-all flex items-center gap-2 shadow-xs cursor-pointer">
+          <i class="fa-solid fa-bag-shopping text-base text-brandTouch-orange"></i>
+          <span class="text-xs font-black hidden sm:inline">السلة</span>
+          <span id="cartCountBadge" class="bg-slateGray-900 text-cream-100 font-black text-[11px] px-2 py-0.5 rounded-full min-w-[20px] text-center">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= شريط الإعلانات التفاعلي المتحرك للنظارات (Marquee Ticker) ================= -->
+  <div class="bg-slateGray-800 text-cream-100 text-[11px] font-bold overflow-hidden py-2 border-b border-slateGray-700 select-none">
+    <div class="marquee-track flex items-center gap-8 whitespace-nowrap">
+      
+      <!-- المحتوى الإعلاني -->
+      <span class="flex items-center gap-2"><i class="fa-solid fa-fire text-brandTouch-orange"></i> عرض خاص: أي نظارة في تشكيلة العرض بـ 250 ج بدلاً من 400 ج لفترة محدودة</span>
+      <span class="text-slateGray-600 font-normal">•</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-crown text-amber-400"></i> تشكيلة ملكية VIP إصدارات خاصة بـ 350 ج</span>
+      <span class="text-slateGray-600 font-normal">•</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-truck-fast text-brandTouch-lime"></i> شحن سريع خلال 24 - 48 ساعة لجميع محافظات مصر</span>
+      <span class="text-slateGray-600 font-normal">•</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-shield text-brandTouch-orange"></i> عدسات عالية النقاء مع حماية UV400 معتمدة</span>
+      <span class="text-slateGray-600 font-normal">•</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-gift text-brandTouch-lime"></i> شحن مجاني تلقائياً لأي طلب بقيمة 1800 ج أو أكثر</span>
+      <span class="text-slateGray-600 font-normal">•</span>
+
+      <!-- تكرار للحركة اللانهائية السلسة -->
+      <span class="flex items-center gap-2"><i class="fa-solid fa-fire text-brandTouch-orange"></i> عرض خاص: أي نظارة في تشكيلة العرض بـ 250 ج بدلاً من 400 ج لفترة محدودة</span>
+      <span class="text-slateGray-600 font-normal">•</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-crown text-amber-400"></i> تشكيلة ملكية VIP إصدارات خاصة بـ 350 ج</span>
+      <span class="text-slateGray-600 font-normal">•</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-truck-fast text-brandTouch-lime"></i> شحن سريع خلال 24 - 48 ساعة لجميع محافظات مصر</span>
+      <span class="text-slateGray-600 font-normal">•</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-shield text-brandTouch-orange"></i> عدسات عالية النقاء مع حماية UV400 معتمدة</span>
+      <span class="text-slateGray-600 font-normal">•</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-gift text-brandTouch-lime"></i> شحن مجاني تلقائياً لأي طلب بقيمة 1800 ج أو أكثر</span>
+    </div>
+  </div>
+
+  <!-- ================= HERO PROMO DISPLAY ================= -->
+  <section class="max-w-6xl mx-auto px-4 pt-4 pb-2">
+    <div class="relative rounded-3xl overflow-hidden border border-cream-300 bg-gradient-to-br from-white via-cream-50 to-cream-200 p-5 md:p-7 shadow-md">
+      
+      <div class="absolute -top-12 -left-12 w-48 h-48 bg-brandTouch-orangeSoft rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+      <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-brandTouch-limeSoft rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+
+      <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-5">
+        
+        <div class="space-y-2.5">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-brandTouch-orangeSoft text-brandTouch-orange text-xs font-extrabold border border-orange-200 shadow-xs">
+              <span class="w-1.5 h-1.5 rounded-full bg-brandTouch-orange animate-ping"></span>
+              عرض الموسم الحصري
+            </span>
+            
+            <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-slateGray-900 text-cream-100 text-xs font-bold font-mono">
+              <i class="fa-regular fa-clock text-brandTouch-lime text-[11px]"></i>
+              <span id="countdownTimer">08:42:15</span>
+            </div>
+          </div>
+
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-slateGray-900 leading-tight">
+            أي نظارة في تشكيلة العرض بـ <span class="text-brandTouch-orange font-black text-3xl sm:text-4xl md:text-5xl">250 ج</span>
+            <span class="text-slateGray-600 text-lg sm:text-xl md:text-2xl line-through mr-2 font-medium">بدل 400 ج</span>
+          </h1>
+
+          <p class="text-slateGray-700 text-xs sm:text-sm max-w-xl font-medium leading-relaxed">
+            وفر 150 ج.م على كل قطعة، واختر من بين أكثر من 30 تصميماً حصرياً يليق بإطلالتك من <strong class="text-slateGray-900 font-extrabold">DH OPTICS</strong>.
+          </p>
+        </div>
+
+        <div class="shrink-0 flex flex-col sm:flex-row items-center gap-3">
+          <button onclick="scrollTo250Section()" class="hero-btn-animated w-full sm:w-auto bg-slateGray-900 hover:bg-black text-white font-black px-7 py-3.5 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2.5 cursor-pointer border-t border-slateGray-700 active:scale-95 transition-all">
+            <span class="w-2 h-2 rounded-full bg-brandTouch-orange"></span>
+            <span>تصفح نظارات العرض (250 ج)</span>
+            <i class="fa-solid fa-arrow-down text-brandTouch-lime animate-bounce text-xs"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= المميزات مجمعة في شريط أفقي مضغوط وأنيق (Inline Strip) ================= -->
+  <section class="max-w-6xl mx-auto px-4 py-2">
+    <div class="bg-white rounded-2xl border border-cream-200 py-3 px-4 shadow-xs flex flex-wrap items-center justify-between gap-4 text-slateGray-800">
+      
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-brandTouch-orangeSoft flex items-center justify-center text-brandTouch-orange shrink-0">
+          <i class="fa-solid fa-truck-fast text-xs"></i>
+        </div>
+        <div>
+          <h4 class="text-xs font-black text-slateGray-900 leading-tight">شحن سريع ومباشر</h4>
+          <p class="text-[10px] text-slateGray-600">توصيل لكافة المحافظات خلال 48 ساعة</p>
+        </div>
+      </div>
+
+      <div class="hidden sm:block w-px h-6 bg-cream-300"></div>
+
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-slateGray-100 flex items-center justify-center text-slateGray-800 shrink-0">
+          <i class="fa-solid fa-gem text-xs"></i>
+        </div>
+        <div>
+          <h4 class="text-xs font-black text-slateGray-900 leading-tight">خامات فاخرة وعصرية</h4>
+          <p class="text-[10px] text-slateGray-600">تصاميم دقيقة تدوم معك طويلاً</p>
+        </div>
+      </div>
+
+      <div class="hidden sm:block w-px h-6 bg-cream-300"></div>
+
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-brandTouch-limeSoft flex items-center justify-center text-brandTouch-lime shrink-0">
+          <i class="fa-solid fa-eye text-xs"></i>
+        </div>
+        <div>
+          <h4 class="text-xs font-black text-slateGray-900 leading-tight">راحة فائقة للعين</h4>
+          <p class="text-[10px] text-slateGray-600">رؤية واضحة ومريحة طوال اليوم</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SLIDERS CONTAINER ================= -->
+  <main class="max-w-6xl mx-auto px-4 space-y-9 py-4" id="slidersContainer">
+    <!-- السليدرات تُبنى برمجياً -->
+  </main>
+
+  <!-- ================= REVIEWS SECTION ================= -->
+  <section class="max-w-6xl mx-auto px-4 py-8">
+    <div class="text-center mb-6">
+      <h2 class="text-xl md:text-2xl font-black text-slateGray-900">آراء وتقييمات العملاء</h2>
+      <p class="text-xs text-slateGray-600 mt-1 font-medium">تجارب حقيقية لعملاء وثقوا في فخامة DH OPTICS</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-white p-4.5 rounded-2xl border border-cream-200 shadow-xs">
+        <div class="flex items-center justify-between mb-2.5">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-full bg-cream-200 text-slateGray-900 font-black flex items-center justify-center text-xs">م.ع</div>
+            <div>
+              <h4 class="text-xs font-bold text-slateGray-900">م/ عمر عادل</h4>
+              <span class="text-[10px] text-slateGray-600">القاهرة</span>
+            </div>
+          </div>
+          <div class="text-amber-500 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </div>
+        <p class="text-xs text-slateGray-800 leading-relaxed font-normal">"السعر في العرض ممتاز جداً والخامة فاخرة وشكلها شيك وقيم جداً على اللبس."</p>
+      </div>
+
+      <div class="bg-white p-4.5 rounded-2xl border border-cream-200 shadow-xs">
+        <div class="flex items-center justify-between mb-2.5">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-full bg-cream-200 text-slateGray-900 font-black flex items-center justify-center text-xs">د.س</div>
+            <div>
+              <h4 class="text-xs font-bold text-slateGray-900">د/ سارة إبراهيم</h4>
+              <span class="text-[10px] text-slateGray-600">الإسكندرية</span>
+            </div>
+          </div>
+          <div class="text-amber-500 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </div>
+        <p class="text-xs text-slateGray-800 leading-relaxed font-normal">"مريحة جداً وخفيفة في اللبس طوال اليوم، وتفاصيل الفريم متقنة جداً."</p>
+      </div>
+
+      <div class="bg-white p-4.5 rounded-2xl border border-cream-200 shadow-xs">
+        <div class="flex items-center justify-between mb-2.5">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-full bg-cream-200 text-slateGray-900 font-black flex items-center justify-center text-xs">ح.س</div>
+            <div>
+              <h4 class="text-xs font-bold text-slateGray-900">أ/ حسام سامي</h4>
+              <span class="text-[10px] text-slateGray-600">الجيزة</span>
+            </div>
+          </div>
+          <div class="text-amber-500 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </div>
+        <p class="text-xs text-slateGray-800 leading-relaxed font-normal">"سرعة توصيل محترمة، وخدمة العملاء على الواتساب قمة في الذوق والمتابعة."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LUXURY CHECKOUT MODAL ================= -->
+  <div id="checkoutModal" class="fixed inset-0 z-50 bg-slateGray-900/70 backdrop-blur-md hidden items-center justify-center p-3 md:p-6 overflow-y-auto">
+    <div class="bg-white border border-cream-300 rounded-3xl w-full max-w-xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Modal Header -->
+      <div class="p-4 md:p-5 border-b border-cream-200 flex items-center justify-between bg-cream-50">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-slateGray-900 flex items-center justify-center text-brandTouch-orange shadow-xs">
+            <i class="fa-solid fa-bag-shopping text-sm"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-black text-slateGray-900">إتمام طلب الشراء والتوصيل</h3>
+            <p class="text-[10.5px] text-slateGray-600 font-medium">سجل بياناتك وسيتم شحن طلبك فوراً</p>
+          </div>
+        </div>
+        <button onclick="closeCheckoutModal()" class="w-8 h-8 rounded-full bg-cream-200 text-slateGray-700 hover:text-slateGray-900 flex items-center justify-center text-xs transition-colors cursor-pointer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-4 md:p-6 overflow-y-auto space-y-5 flex-1">
+        
+        <!-- ملخص السلة -->
+        <div class="bg-cream-50 p-4 rounded-2xl border border-cream-200">
+          <h4 class="text-xs font-black text-slateGray-900 mb-3 flex items-center justify-between">
+            <span>المنتجات المختارة</span>
+            <span id="modalItemsCountBadge" class="text-slateGray-600 font-bold">0 منتج</span>
+          </h4>
+
+          <div id="modalCartItemsList" class="space-y-2.5 max-h-40 overflow-y-auto no-scrollbar"></div>
+
+          <div class="border-t border-cream-300 mt-3.5 pt-3 space-y-1.5 text-xs font-medium">
+            <div class="flex justify-between text-slateGray-700">
+              <span>إجمالي المنتجات:</span>
+              <span id="modalSubtotal" class="font-bold text-slateGray-900">0 ج.م</span>
+            </div>
+            <div class="flex justify-between text-slateGray-700">
+              <span>تكلفة التوصيل:</span>
+              <span id="modalShipping" class="font-bold text-brandTouch-orange">اختر المحافظة</span>
+            </div>
+            <div class="flex justify-between text-sm font-black text-slateGray-900 pt-2 border-t border-cream-300">
+              <span>المبلغ الإجمالي:</span>
+              <span id="modalGrandTotal" class="text-brandTouch-orange text-base font-black">0 ج.م</span>
+            </div>
+            <div id="freeShippingAlert" class="hidden text-[11px] text-emerald-800 font-extrabold text-center bg-emerald-100/70 border border-emerald-300 p-2 rounded-xl mt-1.5">
+              🎉 مبروك! حصلت على شحن مجاني لتجاوز طلبك 1800 ج.م
+            </div>
+          </div>
+        </div>
+
+        <form id="orderForm" onsubmit="handleOrderSubmit(event)" class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-bold text-slateGray-800 mb-1">الاسم بالكامل <span class="text-brandTouch-orange">*</span></label>
+            <input required type="text" id="custName" placeholder="مثال: محمد علي" class="w-full bg-white border border-cream-300 focus:border-slateGray-900 rounded-xl px-3.5 py-2.5 text-xs font-medium text-slateGray-900 outline-none transition-all">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slateGray-800 mb-1">
+              رقم الهاتف الأساسي (11 رقماً) <span class="text-brandTouch-orange">*</span>
+            </label>
+            <div class="relative">
+              <input required type="tel" id="custPhone" maxlength="11" minlength="11" placeholder="010xxxxxxxx" class="w-full bg-white border border-cream-300 focus:border-slateGray-900 rounded-xl px-3.5 py-2.5 text-xs text-slateGray-900 outline-none font-mono text-left dir-ltr transition-all font-bold" oninput="validatePhone(this)">
+              <span id="phoneStatusIcon" class="absolute right-3.5 top-3 text-xs"></span>
+            </div>
+            <p id="phoneErrorMsg" class="hidden text-[10px] text-rose-600 mt-1 font-bold">يجب أن يتكون من 11 رقماً ويبدأ بـ (010, 011, 012, 015)</p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slateGray-800 mb-1">رقم هاتف بديل (اختياري)</label>
+            <input type="tel" id="custAltPhone" maxlength="11" placeholder="رقم إضافي اختياري" class="w-full bg-white border border-cream-300 focus:border-slateGray-900 rounded-xl px-3.5 py-2.5 text-xs text-slateGray-900 outline-none font-mono text-left dir-ltr transition-all">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slateGray-800 mb-1">المحافظة (حساب الشحن تلقائي) <span class="text-brandTouch-orange">*</span></label>
+            <select required id="custGov" onchange="calculateModalTotal()" class="w-full bg-white border border-cream-300 focus:border-slateGray-900 rounded-xl px-3.5 py-2.5 text-xs font-semibold text-slateGray-900 outline-none transition-all">
+              <option value="" disabled selected>اختر محافظتك من القائمة...</option>
+              
+              <optgroup label="القاهرة والجيزة (80 ج.م)">
+                <option value="القاهرة" data-cost="80">القاهرة (80 ج.م)</option>
+                <option value="الجيزة" data-cost="80">الجيزة (80 ج.م)</option>
+              </optgroup>
+
+              <optgroup label="الوجه البحري والقناة (80 ج.م)">
+                <option value="الإسكندرية" data-cost="80">الإسكندرية (80 ج.م)</option>
+                <option value="القليوبية" data-cost="80">القليوبية (80 ج.م)</option>
+                <option value="البحيرة" data-cost="80">البحيرة (80 ج.م)</option>
+                <option value="كفر الشيخ" data-cost="80">كفر الشيخ (80 ج.م)</option>
+                <option value="دمياط" data-cost="80">دمياط (80 ج.م)</option>
+                <option value="الدقهلية" data-cost="80">الدقهلية (80 ج.م)</option>
+                <option value="الغربية" data-cost="80">الغربية (80 ج.م)</option>
+                <option value="المنوفية" data-cost="80">المنوفية (80 ج.م)</option>
+                <option value="الشرقية" data-cost="80">الشرقية (80 ج.م)</option>
+                <option value="بورسعيد" data-cost="80">بورسعيد (80 ج.م)</option>
+                <option value="السويس" data-cost="80">السويس (80 ج.م)</option>
+                <option value="الإسماعيلية" data-cost="80">الإسماعيلية (80 ج.م)</option>
+              </optgroup>
+
+              <optgroup label="خط الصعيد (100 ج.م)">
+                <option value="الفيوم" data-cost="100">الفيوم (100 ج.م)</option>
+                <option value="بني سويف" data-cost="100">بني سويف (100 ج.م)</option>
+                <option value="المنيا" data-cost="100">المنيا (100 ج.م)</option>
+                <option value="أسيوط" data-cost="100">أسيوط (100 ج.م)</option>
+                <option value="سوهاج" data-cost="100">سوهاج (100 ج.م)</option>
+                <option value="قنا" data-cost="100">قنا (100 ج.م)</option>
+                <option value="الأقصر" data-cost="100">الأقصر (100 ج.م)</option>
+                <option value="أسوان" data-cost="100">أسوان (100 ج.م)</option>
+              </optgroup>
+
+              <optgroup label="خط السواحل والمحافظات الحدودية (140 ج.م)">
+                <option value="مرسى مطروح" data-cost="140">مرسى مطروح (140 ج.م)</option>
+                <option value="البحر الأحمر" data-cost="140">البحر الأحمر / الغردقة (140 ج.م)</option>
+                <option value="شرم الشيخ" data-cost="140">شرم الشيخ / جنوب سيناء (140 ج.م)</option>
+                <option value="الوادي الجديد" data-cost="140">الوادي الجديد (140 ج.م)</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slateGray-800 mb-1">العنوان بالتفصيل <span class="text-brandTouch-orange">*</span></label>
+            <textarea required id="custAddress" rows="2" placeholder="المنطقة، اسم الشارع، رقم العمارة، رقم الشقة" class="w-full bg-white border border-cream-300 focus:border-slateGray-900 rounded-xl px-3.5 py-2 text-xs font-medium text-slateGray-900 outline-none transition-all"></textarea>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slateGray-800 mb-1">ملاحظات لموعد التسليم (اختياري)</label>
+            <input type="text" id="custNotes" placeholder="مثال: يرجى الاتصال قبل الوصول" class="w-full bg-white border border-cream-300 focus:border-slateGray-900 rounded-xl px-3.5 py-2 text-xs text-slateGray-900 outline-none transition-all">
+          </div>
+
+          <button type="submit" class="w-full bg-slateGray-900 hover:bg-black text-white font-black py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2.5 text-xs cursor-pointer border-t border-slateGray-700">
+            <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i>
+            <span>تأكيد الأوردر عبر الواتساب الآن</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= ADVANCED AI CHATBOT ================= -->
+  <button id="chatbotToggleBtn" onclick="toggleChatbot()" class="fixed bottom-20 md:bottom-6 left-4 z-40 w-12 h-12 rounded-2xl bg-slateGray-900 text-cream-100 flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all cursor-pointer border border-slateGray-700">
+    <div class="relative">
+      <i class="fa-solid fa-wand-magic-sparkles text-base text-brandTouch-orange"></i>
+      <span class="absolute -top-2 -right-2 w-3.5 h-3.5 bg-brandTouch-lime rounded-full border-2 border-slateGray-900 animate-pulse"></span>
+    </div>
+  </button>
+
+  <div id="chatbotModal" class="fixed bottom-24 md:bottom-20 left-4 z-50 w-[92vw] max-w-[360px] bg-white/95 backdrop-blur-xl border border-cream-300 rounded-3xl shadow-2xl overflow-hidden flex flex-col hidden transition-all duration-300">
+    
+    <div class="bg-gradient-to-r from-slateGray-900 to-slateGray-800 p-3.5 flex items-center justify-between text-white border-b border-slateGray-700">
+      <div class="flex items-center gap-2.5">
+        <div class="relative w-8 h-8 rounded-xl bg-slateGray-800 border border-slateGray-700 flex items-center justify-center text-brandTouch-lime text-xs">
+          <i class="fa-solid fa-brain"></i>
+          <span class="absolute -bottom-0.5 -right-0.5 w-2 h-2 bg-brandTouch-lime rounded-full"></span>
+        </div>
+        <div>
+          <h4 class="text-xs font-black flex items-center gap-1.5 leading-none">
+            مستشار DH الذكي
+            <span class="text-[9px] bg-brandTouch-orange/25 text-brandTouch-orange border border-brandTouch-orange/30 px-1.5 py-0.2 rounded-md font-bold">AI Pro</span>
+          </h4>
+          <p class="text-[9.5px] text-cream-300 font-medium mt-1">تحديد الموديل الأنسب، المقاسات، والأسعار</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-1">
+        <button onclick="clearChat()" title="مسح المحادثة" class="w-6 h-6 rounded-lg bg-slateGray-800 text-cream-300 hover:text-white flex items-center justify-center text-[10px] cursor-pointer">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+        <button onclick="toggleChatbot()" class="w-6 h-6 rounded-lg bg-slateGray-800 text-cream-300 hover:text-white flex items-center justify-center text-xs cursor-pointer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="chatMessages" class="p-3.5 space-y-3 max-h-[300px] overflow-y-auto text-xs no-scrollbar bg-cream-50 font-medium">
+      <div class="flex gap-2 items-start">
+        <div class="w-6 h-6 rounded-lg bg-slateGray-900 text-brandTouch-orange flex items-center justify-center text-[10px] shrink-0 mt-0.5 shadow-xs">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <div class="bg-white border border-cream-200 p-3 rounded-2xl rounded-tr-none text-slateGray-800 leading-relaxed shadow-xs">
+          أهلاً بك في <strong>DH OPTICS</strong> ✨<br>
+          أنا مستشارك الشخصي المدعوم بالذكاء الاصطناعي لاختيار النظارة المثالية وتأكيد الطلبات. تقدر تصف لي ذوقك، شكل وجهك، أو تسألني عن أي تفاصيل مباشرة!
+        </div>
+      </div>
+    </div>
+
+    <div id="aiTypingIndicator" class="hidden px-4 py-2 bg-cream-50 flex items-center gap-2 text-[11px] text-slateGray-600 font-bold border-t border-cream-200">
+      <div class="flex gap-1 items-center">
+        <span class="w-1.5 h-1.5 rounded-full bg-brandTouch-orange wave-1"></span>
+        <span class="w-1.5 h-1.5 rounded-full bg-slateGray-700 wave-2"></span>
+        <span class="w-1.5 h-1.5 rounded-full bg-brandTouch-lime wave-3"></span>
+      </div>
+      <span>الذكاء الاصطناعي يحلل طلبك...</span>
+    </div>
+
+    <div class="px-3 pb-2 pt-1 flex flex-wrap gap-1 bg-cream-50 border-t border-cream-200">
+      <button onclick="botQuickAnswer('face_recommend')" class="text-[10px] font-bold bg-white hover:bg-cream-100 border border-cream-300 text-slateGray-900 px-2.5 py-1 rounded-full cursor-pointer transition-colors shadow-xs">
+        👤 ترشيح حسب شكل الوجه
+      </button>
+      <button onclick="botQuickAnswer('offer_details')" class="text-[10px] font-bold bg-white hover:bg-cream-100 border border-cream-300 text-slateGray-900 px-2.5 py-1 rounded-full cursor-pointer transition-colors shadow-xs">
+        🔥 تفاصيل عرض الـ 250 ج
+      </button>
+      <button onclick="botQuickAnswer('vip_vs_promo')" class="text-[10px] font-bold bg-white hover:bg-cream-100 border border-cream-300 text-slateGray-900 px-2.5 py-1 rounded-full cursor-pointer transition-colors shadow-xs">
+        ⚖️ الفرق بين الـ 350 والـ 250
+      </button>
+      <button onclick="botQuickAnswer('shipping_info')" class="text-[10px] font-bold bg-white hover:bg-cream-100 border border-cream-300 text-slateGray-900 px-2.5 py-1 rounded-full cursor-pointer transition-colors shadow-xs">
+        🚚 مدة وتكلفة الشحن
+      </button>
+    </div>
+
+    <form onsubmit="handleBotUserMessage(event)" class="p-2.5 border-t border-cream-200 bg-white flex gap-2">
+      <input type="text" id="botInput" placeholder="اسأل المستشار الذكي عن أي نظارة..." class="flex-1 bg-cream-50 border border-cream-300 focus:border-slateGray-900 rounded-xl px-3 py-1.5 text-xs text-slateGray-900 outline-none font-medium">
+      <button type="submit" class="w-8 h-8 rounded-xl bg-slateGray-900 text-white flex items-center justify-center text-xs hover:bg-brandTouch-orange transition-colors cursor-pointer">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- Mobile Bottom Bar -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-cream-200 py-2.5 px-4 md:hidden flex items-center justify-between gap-2.5 shadow-lg">
+    <div class="flex items-center gap-2">
+      <a href="tel:01096141190" class="w-10 h-10 rounded-xl bg-cream-100 border border-cream-300 text-slateGray-800 flex items-center justify-center text-xs">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="https://wa.me/201096141190" target="_blank" class="w-10 h-10 rounded-xl bg-cream-100 border border-cream-300 text-emerald-600 flex items-center justify-center text-base">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+    <button onclick="openCheckoutModal()" class="flex-1 bg-slateGray-900 text-white font-black py-2.5 px-4 rounded-xl text-xs flex items-center justify-center gap-2 cursor-pointer shadow-md border-t border-slateGray-700">
+      <i class="fa-solid fa-bag-shopping text-brandTouch-orange"></i>
+      <span>إتمام الطلب (<span id="mobileCartTotal">0 ج.م</span>)</span>
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-cream-300 bg-cream-200 py-8 px-4 text-center text-slateGray-700 text-xs font-medium">
+    <div class="max-w-6xl mx-auto space-y-2.5">
+      <div class="flex items-center justify-center gap-2">
+        <span class="text-base font-black text-slateGray-900">DH <span class="text-brandTouch-orange">OPTICS</span></span>
+        <span class="text-[9px] text-slateGray-600 font-extrabold tracking-widest">• SEE THE DIFFERENCE</span>
+      </div>
+      <div class="flex justify-center gap-6 text-xs text-slateGray-900 font-bold py-1">
+        <a href="tel:01096141190" class="hover:text-brandTouch-orange font-mono">01096141190</a>
+        <a href="tel:01271458000" class="hover:text-brandTouch-orange font-mono">01271458000</a>
+      </div>
+      <p class="text-[10px] text-slateGray-600">© جميع الحقوق محفوظة لـ DH Optics</p>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // إخفاء شاشة البداية السينمائية بسلاسة
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const overlay = document.getElementById('luxuryIntroOverlay');
+        if (overlay) overlay.classList.add('intro-revealed');
+      }, 1600);
+    });
+
+    const SLIDERS_CONFIG = [
+      { id: 's1', title: '1. التشكيلة الفاخرة الأولى (VIP Edition)', desc: 'تصاميم نخبوية استثنائية بحضور قوي' },
+      { id: 's2', title: '2. التشكيلة الفاخرة الثانية (Royal Series)', desc: 'أناقة ملكية مختارة بعناية لأصحاب الذوق الرفيع' },
+      { id: 's3', title: '3. التشكيلة الكلاسيكية المميزة (عرض خاص 250ج)', desc: 'إطلالة عصرية متناسقة تناسب جميع الأوقات' },
+      { id: 's4', title: '4. تشكيلة النخبة الحصرية (عرض خاص 250ج)', desc: 'تصاميم أيقونية تعكس الفخامة الهادئة' },
+      { id: 's5', title: '5. تشكيلة ستايل العصرية (عرض خاص 250ج)', desc: 'موديلات خفيفة ومريحة للاستخدام اليومي' },
+      { id: 's6', title: '6. تشكيلة التميز الحديثة (عرض خاص 250ج)', desc: 'إطارات متميزة تلفت الأنظار بأناقتها' },
+      { id: 's7', title: '7. التشكيلة الراقية المتنوعة (عرض خاص 250ج)', desc: 'ألوان جذابة ولمسات فنية راقية' },
+      { id: 's8', title: '8. تشكيلة الأناقة الهادئة (عرض خاص 250ج)', desc: 'تصاميم كلاسيكية بإتقان استثنائي' },
+      { id: 's9', title: '9. تشكيلة الذوق الرفيع (عرض خاص 250ج)', desc: 'إطارات دائرية وانسيابية فخمة' },
+      { id: 's10', title: '10. تشكيلة الشياكة المتميزة (عرض خاص 250ج)', desc: 'مظهر جريء وألوان داكنة ملكية' }
+    ];
+
+    const PRODUCTS = [
+      // 8 منتجات بسعر 350 ج [H (1) إلى H (8)]
+      { id: 'p01', sliderId: 's1', title: 'DH Royal Edition Gold', price: 350, oldPrice: 650, badge: 'VIP 350ج', image: 'images/H (1).jpg' },
+      { id: 'p02', sliderId: 's1', title: 'DH Crown Luxury Frame', price: 350, oldPrice: 650, badge: 'VIP 350ج', image: 'images/H (2).jpg' },
+      { id: 'p03', sliderId: 's1', title: 'DH Imperial Masterpiece', price: 350, oldPrice: 650, badge: 'VIP 350ج', image: 'images/H (3).jpg' },
+      { id: 'p04', sliderId: 's1', title: 'DH Elite Supreme Gold', price: 350, oldPrice: 650, badge: 'VIP 350ج', image: 'images/H (4).jpg' },
+
+      { id: 'p05', sliderId: 's2', title: 'DH Prestige Dual Tone', price: 350, oldPrice: 600, badge: 'VIP 350ج', image: 'images/H (5).jpg' },
+      { id: 'p06', sliderId: 's2', title: 'DH Signature Silver Rim', price: 350, oldPrice: 600, badge: 'VIP 350ج', image: 'images/H (6).jpg' },
+      { id: 'p07', sliderId: 's2', title: 'DH Rose Horizon VIP', price: 350, oldPrice: 600, badge: 'VIP 350ج', image: 'images/H (7).jpg' },
+      { id: 'p08', sliderId: 's2', title: 'DH Onyx Gold Navigator', price: 350, oldPrice: 600, badge: 'VIP 350ج', image: 'images/H (8).jpg' },
+
+      // 30 منتجاً بسعر 250 ج بدلاً من 400 ج [D (1) إلى D (30)]
+      { id: 'p09', sliderId: 's3', title: 'DH Classic Black Shade', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (1).jpg' },
+      { id: 'p10', sliderId: 's3', title: 'DH Olive Elegance Frame', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (2).jpg' },
+      { id: 'p11', sliderId: 's3', title: 'DH Amber Horizon', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (3).jpg' },
+      { id: 'p12', sliderId: 's3', title: 'DH Deep Shadow Master', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (4).jpg' },
+
+      { id: 'p13', sliderId: 's4', title: 'DH Vintage Golden Touch', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (5).jpg' },
+      { id: 'p14', sliderId: 's4', title: 'DH Modern Half-Rim Dark', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (6).jpg' },
+      { id: 'p15', sliderId: 's4', title: 'DH Honey Classic Style', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (7).jpg' },
+      { id: 'p16', sliderId: 's4', title: 'DH Tortoise Luxury Edge', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (8).jpg' },
+
+      { id: 'p17', sliderId: 's5', title: 'DH Urban Jet Minimal', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (9).jpg' },
+      { id: 'p18', sliderId: 's5', title: 'DH Carbon Sleek Look', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (10).jpg' },
+      { id: 'p19', sliderId: 's5', title: 'DH Soft Olive Tone', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (11).jpg' },
+      { id: 'p20', sliderId: 's20', title: 'DH Street Dynamic Line', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (12).jpg' },
+
+      { id: 'p21', sliderId: 's6', title: 'DH Hexa Gold Minimal', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (13).jpg' },
+      { id: 'p22', sliderId: 's6', title: 'DH Hexa Dark Shadow', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (14).jpg' },
+      { id: 'p23', sliderId: 's6', title: 'DH Geometric Bold Edge', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (15).jpg' },
+      { id: 'p24', sliderId: 's6', title: 'DH Silver Precision Look', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (16).jpg' },
+
+      { id: 'p25', sliderId: 's7', title: 'DH Ocean Teal Hue', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (17).jpg' },
+      { id: 'p26', sliderId: 's7', title: 'DH Sunset Royal Violet', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (18).jpg' },
+      { id: 'p27', sliderId: 's7', title: 'DH Warm Forest Shade', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (19).jpg' },
+      { id: 'p28', sliderId: 's7', title: 'DH Golden Sunset Glow', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (20).jpg' },
+
+      { id: 'p29', sliderId: 's8', title: 'DH Clear Optical Master', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (21).jpg' },
+      { id: 'p30', sliderId: 's8', title: 'DH Everyday Comfort Pro', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (22).jpg' },
+      { id: 'p31', sliderId: 's8', title: 'DH Round Light Gold', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (23).jpg' },
+      { id: 'p32', sliderId: 's8', title: 'DH Feather Weight Frame', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (24).jpg' },
+
+      { id: 'p33', sliderId: 's9', title: 'DH Vintage Round Gold', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (25).jpg' },
+      { id: 'p34', sliderId: 's9', title: 'DH Retro Circle Classic', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (26).jpg' },
+      { id: 'p35', sliderId: 's9', title: 'DH Wire Frame Prestige', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (27).jpg' },
+
+      { id: 'p36', sliderId: 's10', title: 'DH Chrome Reflex Master', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (28).jpg' },
+      { id: 'p37', sliderId: 's10', title: 'DH Stealth Midnight Jet', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (29).jpg' },
+      { id: 'p38', sliderId: 's10', title: 'DH Bold Square Dark', price: 250, oldPrice: 400, badge: 'عرض 250 بدل 400', image: 'images/D (30).jpg' }
+    ];
+
+    let cart = [];
+
+    function startCountdown() {
+      let seconds = 8 * 3600 + 42 * 60 + 15;
+      const el = document.getElementById('countdownTimer');
+      setInterval(() => {
+        if (seconds <= 0) seconds = 24 * 3600;
+        seconds--;
+        const h = String(Math.floor(seconds / 3600)).padStart(2, '0');
+        const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+        const s = String(seconds % 60).padStart(2, '0');
+        if (el) el.innerText = `${h}:${m}:${s}`;
+      }, 1000);
+    }
+
+    function scrollTo250Section() {
+      const target = document.getElementById('s3-section') || document.getElementById('s3');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function renderAllSliders() {
+      const container = document.getElementById('slidersContainer');
+      container.innerHTML = '';
+
+      SLIDERS_CONFIG.forEach(cfg => {
+        const sliderProducts = PRODUCTS.filter(p => p.sliderId === cfg.id);
+        if (sliderProducts.length === 0) return;
+
+        let cardsHtml = '';
+        sliderProducts.forEach(p => {
+          cardsHtml += `
+            <div class="min-w-[240px] md:min-w-[250px] bg-white border border-cream-200 rounded-2xl overflow-hidden flex flex-col justify-between p-3.5 shadow-xs hover:border-slateGray-400 hover:shadow-md transition-all">
+              <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-cream-50 border border-cream-200">
+                <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
+                <span class="absolute top-2 right-2 bg-slateGray-900/90 text-cream-100 text-[10px] font-black px-2.5 py-0.5 rounded-full">
+                  ${p.badge}
+                </span>
+              </div>
+              <div class="mt-3 space-y-1">
+                <h4 class="text-xs font-bold text-slateGray-900 truncate">${p.title}</h4>
+                <div class="flex items-baseline gap-2 pt-0.5">
+                  <span class="text-base font-black text-brandTouch-orange">${p.price} ج.م</span>
+                  <span class="text-xs text-slateGray-600 line-through font-medium">${p.oldPrice} ج.م</span>
+                </div>
+              </div>
+              <button onclick="addToCart('${p.id}')" class="mt-3 w-full py-2.5 rounded-xl bg-cream-100 hover:bg-slateGray-900 hover:text-white border border-cream-300 text-slateGray-900 font-extrabold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+                <i class="fa-solid fa-plus text-[10px]"></i>
+                <span>إضافة للطلب</span>
+              </button>
+            </div>
+          `;
+        });
+
+        const sliderBlock = `
+          <section id="${cfg.id}-section">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <h3 class="text-sm md:text-base font-black text-slateGray-900 flex items-center gap-2">
+                  <span class="w-1.5 h-4 rounded-full bg-brandTouch-orange inline-block"></span>
+                  ${cfg.title}
+                </h3>
+                <p class="text-[11px] text-slateGray-600 font-medium mt-0.5">${cfg.desc}</p>
+              </div>
+              <div class="flex gap-1.5">
+                <button onclick="scrollSlider('${cfg.id}', -280)" class="w-7 h-7 rounded-lg bg-white border border-cream-300 text-slateGray-800 flex items-center justify-center text-xs hover:bg-cream-100 cursor-pointer shadow-xs">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <button onclick="scrollSlider('${cfg.id}', 280)" class="w-7 h-7 rounded-lg bg-white border border-cream-300 text-slateGray-800 flex items-center justify-center text-xs hover:bg-cream-100 cursor-pointer shadow-xs">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+              </div>
+            </div>
+            <div id="${cfg.id}" class="flex gap-3.5 overflow-x-auto no-scrollbar scroll-smooth pb-2">
+              ${cardsHtml}
+            </div>
+          </section>
+        `;
+
+        container.innerHTML += sliderBlock;
+      });
+    }
+
+    function scrollSlider(id, amount) {
+      document.getElementById(id).scrollBy({ left: amount, behavior: 'smooth' });
+    }
+
+    function addToCart(productId) {
+      const p = PRODUCTS.find(item => item.id === productId);
+      const existing = cart.find(item => item.id === productId);
+      
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...p, qty: 1 });
+      }
+
+      updateCartBadge();
+      showToast(`تمت إضافة "${p.title}" إلى السلة`);
+    }
+
+    function changeQty(productId, delta) {
+      const item = cart.find(i => i.id === productId);
+      if (!item) return;
+
+      item.qty += delta;
+      if (item.qty <= 0) {
+        cart = cart.filter(i => i.id !== productId);
+      }
+      renderModalCart();
+      updateCartBadge();
+    }
+
+    function updateCartBadge() {
+      const totalItems = cart.reduce((sum, i) => sum + i.qty, 0);
+      const subtotal = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+      document.getElementById('cartCountBadge').innerText = totalItems;
+      document.getElementById('mobileCartTotal').innerText = `${subtotal} ج.م`;
+    }
+
+    function openCheckoutModal() {
+      if (cart.length === 0) {
+        alert('سلتك فارغة حالياً! اختر نظارة واضغط "إضافة للطلب" أولاً.');
+        return;
+      }
+      renderModalCart();
+      const modal = document.getElementById('checkoutModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById('checkoutModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function renderModalCart() {
+      const container = document.getElementById('modalCartItemsList');
+      const badge = document.getElementById('modalItemsCountBadge');
+      container.innerHTML = '';
+
+      const totalItems = cart.reduce((sum, i) => sum + i.qty, 0);
+      badge.innerText = `${totalItems} نظارة`;
+
+      if (cart.length === 0) {
+        container.innerHTML = '<p class="text-xs text-slateGray-600 py-3 text-center">لا توجد منتجات مختارة.</p>';
+        closeCheckoutModal();
+        return;
+      }
+
+      cart.forEach(item => {
+        container.innerHTML += `
+          <div class="flex items-center justify-between bg-white p-2.5 rounded-xl border border-cream-200 text-xs shadow-xs">
+            <div class="flex items-center gap-2.5">
+              <img src="${item.image}" class="w-9 h-9 rounded-lg object-cover border border-cream-200">
+              <div>
+                <h5 class="font-bold text-slateGray-900 truncate max-w-[140px]">${item.title}</h5>
+                <span class="text-brandTouch-orange font-black">${item.price} ج.م</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-1">
+              <button type="button" onclick="changeQty('${item.id}', -1)" class="w-6 h-6 rounded-lg bg-cream-100 text-slateGray-900 font-bold hover:bg-cream-200 cursor-pointer">-</button>
+              <span class="font-black text-slateGray-900 px-1.5">${item.qty}</span>
+              <button type="button" onclick="changeQty('${item.id}', 1)" class="w-6 h-6 rounded-lg bg-cream-100 text-slateGray-900 font-bold hover:bg-cream-200 cursor-pointer">+</button>
+            </div>
+          </div>
+        `;
+      });
+
+      calculateModalTotal();
+    }
+
+    function calculateModalTotal() {
+      const subtotal = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+      document.getElementById('modalSubtotal').innerText = `${subtotal} ج.م`;
+
+      const govSelect = document.getElementById('custGov');
+      const selectedOption = govSelect.options[govSelect.selectedIndex];
+      let shippingCost = 0;
+      let shippingText = 'اختر المحافظة';
+
+      if (selectedOption && selectedOption.dataset.cost) {
+        shippingCost = parseInt(selectedOption.dataset.cost);
+        const freeAlert = document.getElementById('freeShippingAlert');
+        
+        if (subtotal >= 1800 && subtotal > 0) {
+          shippingCost = 0;
+          shippingText = 'مجاني (عرض خاص)';
+          freeAlert.classList.remove('hidden');
+        } else {
+          shippingText = `${shippingCost} ج.م`;
+          freeAlert.classList.add('hidden');
+        }
+      }
+
+      document.getElementById('modalShipping').innerText = shippingText;
+      const grandTotal = subtotal + shippingCost;
+      document.getElementById('modalGrandTotal').innerText = `${grandTotal} ج.م`;
+    }
+
+    function validatePhone(input) {
+      const val = input.value.trim();
+      const err = document.getElementById('phoneErrorMsg');
+      const icon = document.getElementById('phoneStatusIcon');
+      const regex = /^01[0125][0-9]{8}$/;
+
+      if (val.length === 11 && regex.test(val)) {
+        err.classList.add('hidden');
+        icon.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600"></i>';
+      } else {
+        if (val.length > 0) {
+          err.classList.remove('hidden');
+          icon.innerHTML = '<i class="fa-solid fa-circle-exclamation text-amber-500"></i>';
+        } else {
+          err.classList.add('hidden');
+          icon.innerHTML = '';
+        }
+      }
+    }
+
+    function handleOrderSubmit(e) {
+      e.preventDefault();
+
+      if (cart.length === 0) {
+        alert('سلتك فارغة!');
+        return;
+      }
+
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const altPhone = document.getElementById('custAltPhone').value.trim();
+      const govSelect = document.getElementById('custGov');
+      const govName = govSelect.options[govSelect.selectedIndex].text;
+      const address = document.getElementById('custAddress').value.trim();
+      const notes = document.getElementById('custNotes').value.trim();
+
+      const regex = /^01[0125][0-9]{8}$/;
+      if (!regex.test(phone)) {
+        alert('برجاء كتابة رقم هاتف صحيح مكون من 11 رقماً ويبدأ بـ (010, 011, 012, 015)');
+        document.getElementById('custPhone').focus();
+        return;
+      }
+
+      const subtotal = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+      let shippingCost = parseInt(govSelect.options[govSelect.selectedIndex].dataset.cost || 0);
+      if (subtotal >= 1800) shippingCost = 0;
+      const grandTotal = subtotal + shippingCost;
+
+      let itemsListText = '';
+      cart.forEach((item, index) => {
+        itemsListText += `${index + 1}. *${item.title}* (عدد: ${item.qty}) - السعر: ${item.price * item.qty} ج.م%0A`;
+      });
+
+      const waMessage = 
+        `⚡ *طلب جديد من متجر DH OPTICS*%0A` +
+        `-----------------------------------------%0A` +
+        `👤 *اسم العميل:* ${encodeURIComponent(name)}%0A` +
+        `📱 *رقم الهاتف الأساسي:* ${encodeURIComponent(phone)}%0A` +
+        (altPhone ? `📞 *رقم بديل:* ${encodeURIComponent(altPhone)}%0A` : '') +
+        `📍 *المحافظة:* ${encodeURIComponent(govName)}%0A` +
+        `🏠 *العنوان بالتفصيل:* ${encodeURIComponent(address)}%0A` +
+        (notes ? `📝 *ملاحظات:* ${encodeURIComponent(notes)}%0A` : '') +
+        `-----------------------------------------%0A` +
+        `👓 *النظارات المطلوبة:*%0A${itemsListText}` +
+        `-----------------------------------------%0A` +
+        `💵 *إجمالي المنتجات:* ${subtotal} ج.م%0A` +
+        `🚚 *الشحن والتوصيل:* ${shippingCost === 0 ? 'شحن مجاني' : shippingCost + ' ج.م'}%0A` +
+        `💰 *المبلغ النهائي المطلوب:* *${grandTotal} ج.م*`;
+
+      const targetPhone = "201096141190";
+      const waUrl = `https://wa.me/${targetPhone}?text=${waMessage}`;
+
+      window.open(waUrl, '_blank');
+      closeCheckoutModal();
+    }
+
+    function showToast(msg) {
+      const toast = document.createElement('div');
+      toast.className = 'fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-slateGray-900 text-cream-100 px-4 py-2.5 rounded-xl text-xs font-bold shadow-xl flex items-center gap-2 border border-slateGray-700';
+      toast.innerHTML = `<i class="fa-solid fa-check text-brandTouch-lime"></i> <span>${msg}</span>`;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 2200);
+    }
+
+    // ================= ADVANCED AI CHAT ENGINE =================
+    function toggleChatbot() {
+      const modal = document.getElementById('chatbotModal');
+      modal.classList.toggle('hidden');
+      if (!modal.classList.contains('hidden')) {
+        document.getElementById('botInput').focus();
+      }
+    }
+
+    function clearChat() {
+      const container = document.getElementById('chatMessages');
+      container.innerHTML = `
+        <div class="flex gap-2 items-start">
+          <div class="w-6 h-6 rounded-lg bg-slateGray-900 text-brandTouch-orange flex items-center justify-center text-[10px] shrink-0 mt-0.5 shadow-xs">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <div class="bg-white border border-cream-200 p-3 rounded-2xl rounded-tr-none text-slateGray-800 leading-relaxed shadow-xs">
+            تم تجديد المحادثة ✨ كيف أساعدك الآن في اختيار نظارتك المناسبة؟
+          </div>
+        </div>
+      `;
+    }
+
+    function showTyping(show) {
+      const indicator = document.getElementById('aiTypingIndicator');
+      if (show) indicator.classList.remove('hidden');
+      else indicator.classList.add('hidden');
+    }
+
+    function appendMessage(sender, text) {
+      const container = document.getElementById('chatMessages');
+      const isBot = sender === 'bot';
+
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `flex gap-2 items-start ${isBot ? '' : 'flex-row-reverse'}`;
+
+      const avatar = isBot 
+        ? `<div class="w-6 h-6 rounded-lg bg-slateGray-900 text-brandTouch-orange flex items-center justify-center text-[10px] shrink-0 mt-0.5"><i class="fa-solid fa-wand-magic-sparkles"></i></div>`
+        : `<div class="w-6 h-6 rounded-lg bg-slateGray-800 text-white flex items-center justify-center text-[10px] shrink-0 mt-0.5"><i class="fa-solid fa-user"></i></div>`;
+
+      const bubble = `
+        <div class="${isBot ? 'bg-white border border-cream-200 text-slateGray-900 shadow-xs' : 'bg-slateGray-900 text-white font-medium'} p-3 rounded-2xl ${isBot ? 'rounded-tr-none' : 'rounded-tl-none'} max-w-[84%] leading-relaxed text-xs">
+          ${text}
+        </div>
+      `;
+
+      msgDiv.innerHTML = avatar + bubble;
+      container.appendChild(msgDiv);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function simulateAiReply(userPrompt, replyHtml, delay = 850) {
+      appendMessage('user', userPrompt);
+      showTyping(true);
+      setTimeout(() => {
+        showTyping(false);
+        appendMessage('bot', replyHtml);
+      }, delay);
+    }
+
+    function generateSmartResponse(rawQuery) {
+      const q = rawQuery.toLowerCase();
+
+      if (q.includes('وجه') || q.includes('وشي') || q.includes('ملامح') || q.includes('شكلي')) {
+        if (q.includes('دائري') || q.includes('مدور')) {
+          return '✨ <strong>ترشيح الوجه الدائري:</strong><br>الأنسب لك تماماً هي الإطارات المربعة أو المسدسة ذات الزوايا الحادة، لأنها تمنح وجهك طولاً وتوازناً جذاباً. أنصحك بمشاهدة التشكيلة الكلاسيكية وتشكيلة التميز الحديثة في العرض.';
+        }
+        if (q.includes('مربع') || q.includes('عريض') || q.includes('حاد')) {
+          return '✨ <strong>ترشيح الوجه المربع:</strong><br>نوصي باختيار الإطارات المنحنية، البيضاوية، أو الأفياتور الكلاسيكية (التشكيلة الملكية VIP) لتنعيم زوايا الفك وإعطاء مظهر متناسق للغاية.';
+        }
+        if (q.includes('طويل') || q.includes('مستطيل')) {
+          return '✨ <strong>ترشيح الوجه المستطيل أو الطويل:</strong><br>تليق بك النظارات ذات الإطار العريض والعدسات الكبيرة التي تغطي منتصف الوجه وتمنحه عرضاً متناسقاً. تفقد تشكيلة ستايل العصرية.';
+        }
+        return '👓 <strong>دليل اختيار النظارة حسب الوجه:</strong><br>• <strong>الوجه الدائري:</strong> تليق به النظارات المربعة والهندسية.<br>• <strong>الوجه المربع:</strong> تليق به النظارات الدائرية والأفياتور.<br>• <strong>الوجه البيضاوي:</strong> تليق به كافة التشكيلات وبشكل خاص التشكيلة الفاخرة الأولى.<br>ما هو شكل وجهك لارشح لك بدقة؟';
+      }
+
+      if (q.includes('250') || q.includes('عرض') || q.includes('خصم') || q.includes('تخفيض') || q.includes('كام النظارة')) {
+        return '🔥 <strong>تفاصيل أقوى عروض الموسم:</strong><br>أي نظارة ضمن تشكيلة العرض متاحة حالياً بـ <strong>250 ج بدلاً من 400 ج</strong> لفترة محدودة، وتشكيلات VIP بسعر <strong>350 ج</strong>.<br><br><button onclick="scrollTo250Section(); toggleChatbot();" class="text-xs font-black text-brandTouch-orange underline">اضغط هنا للانتقال فوراً لنظارات الـ 250 ج</button>';
+      }
+
+      if (q.includes('فرق') || q.includes('350') || q.includes('vip')) {
+        return '⚖️ <strong>الفرق بين الفئتين:</strong><br>• <strong>فئة VIP (350 ج):</strong> تشكيلات ملكية حصرية بإطارات وتفاصيل مزدوجة وإصدارات محدودة.<br>• <strong>فئة العرض (250 ج بدلاً من 400 ج):</strong> تشكيلات عصرية شاملة ومتنوعة ومريحة جداً للاستخدام اليومي.';
+      }
+
+      if (q.includes('شحن') || q.includes('توصيل') || q.includes('محافظ') || q.includes('كام يوم') || q.includes('يوصل امتى')) {
+        return '🚚 <strong>بيانات الشحن والتسليم:</strong><br>• مدة الوصول: <strong>24 إلى 48 ساعة فقط</strong>.<br>• القاهرة والجيزة والدلتا والقناة: 80 ج.<br>• خط الصعيد: 100 ج.<br>• السواحل والحدود: 140 ج.<br>✨ <em>شحن مجاني بالكامل لأي طلب بقيمة 1800 ج أو أكثر!</em>';
+      }
+
+      if (q.includes('طلب') || q.includes('شراء') || q.includes('اوردر') || q.includes('احجز') || q.includes('ازاي')) {
+        return '🛒 <strong>طريقة حجز طلبك في خطوتين:</strong><br>1. اختر الموديل واضغط <strong>"إضافة للطلب"</strong>.<br>2. اضغط على زر السلة، واملأ بياناتك وسيتم توجيهك فوراً للواتساب لتأكيد الشحن.';
+      }
+
+      if (q.includes('رقم') || q.includes('واتس') || q.includes('تليفون') || q.includes('ادارة') || q.includes('اتصل')) {
+        return '📞 <strong>أرقام التواصل الرسمية مع إدارة DH OPTICS:</strong><br>• 01096141190<br>• 01271458000<br><a href="https://wa.me/201096141190" target="_blank" class="text-brandTouch-orange font-bold underline block mt-1.5">محادثة واتساب مباشرة الآن</a>';
+      }
+
+      return 'أهلاً بك! بصفتي مستشارك الخاص في DH OPTICS، أنا هنا لمساعدتك في اختيار أنسب ستايل، مراجعة الأسعار والعروض، أو مساعدتك في إنهاء طلبك عبر الواتساب. كيف يمكنني إفادتك تحديداً؟';
+    }
+
+    function botQuickAnswer(type) {
+      if (type === 'face_recommend') {
+        simulateAiReply('رشح لي نظارة تناسب ملامح وجهي', generateSmartResponse('وجهي'));
+      } else if (type === 'offer_details') {
+        simulateAiReply('ما هي تفاصيل عرض الـ 250 ج؟', generateSmartResponse('عرض 250'));
+      } else if (type === 'vip_vs_promo') {
+        simulateAiReply('ما الفرق بين تشكيلات الـ 350 والـ 250؟', generateSmartResponse('فرق 350 و 250'));
+      } else if (type === 'shipping_info') {
+        simulateAiReply('ما هي أسعار ومدة التوصيل؟', generateSmartResponse('شحن'));
+      }
+    }
+
+    function handleBotUserMessage(e) {
+      e.preventDefault();
+      const input = document.getElementById('botInput');
+      const val = input.value.trim();
+      if (!val) return;
+
+      input.value = '';
+      const reply = generateSmartResponse(val);
+      simulateAiReply(val, reply, 850);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderAllSliders();
+      updateCartBadge();
+      startCountdown();
+    });
+  </script>
+</body>
+</html>
